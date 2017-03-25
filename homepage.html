@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<title>Alphabuddy</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="jquery.mobile-1.4.3.min.css" />
+		<link rel="stylesheet" type="text/css" href="pretty.css">
+		<script src="jquery-1.11.1.min.js"></script>
+		<script src="jquery.mobile-1.4.3.min.js"></script>
+		<script type="text/javascript" src="sketchpad.js"></script>
+		<script type="text/javascript" src="letters.js"></script>
+		<script type="text/javascript" src="buttons.js"></script>
+	</head>
+	<body onload="init()">
+		
+		<!---Home Page---->
+		<div data-role="page" id="homepage">
+			<div data-role="header" id="idHeader">
+				<center><a href="#homepage"><img id = "picHolder" src = "aaaa.png"></a></img></center>
+			</div>
+			<div data-role="content" id="idContent">
+				<H2><center><font face = "Lucida Console" color = "red" size=6>Select A Language</font></center><H2>
+			</div>
+			<div data-role="main" class="ui-content">
+				<a href="#eng" class="ui-btn" style="background: #D0F5A9; color"> <font color=blue size=6>English </font></a> <br>
+				<a href="#tib" class="ui-btn" style="background: #D0F5A9; color"> <font color=green size=6>Tibetan &#3926;&#3964;&#3921;&#3851;&#3942;&#3984;&#3921;&#3851; </font></a> <br>
+				<a href="#heb" class="ui-btn" style="background: #D0F5A9; color"> <font color=#5F04B4 size=6>Hebrew &#1506;&#1489;&#1512;&#1497;&#1514;</font></a> <br>
+			</div>
+			<center><img id = "picHolder" src = "hello1.png"></img></center>
+		</div>
+		
+		<!---English Home Page---->
+		<div data-role="page" id="eng">
+			<div data-role="header">
+				<center><a href="#homepage"><img id = "picHolder" src = "aaaa.png"></a></img></center>
+			</div>
+			
+			<div data-role="content" id="idContent">
+				<H2><center><font face = "Lucida Console" color = "red" size=6>English</font></center><H2>
+				<a href="#lettersPage" class="ui-btn" style="background: #D0F5A9; color"onclick="engButtons(canvas,ctx)"> <font color=blue size=6>Start</font></a> <br>
+			</div>
+		</div>
+
+		<!---Tibetan Page---->	
+		<div data-role="page" id="tib">
+			<div data-role="header">
+				<center><a href="#homepage"><img id = "picHolder" src = "aaaa.png"></a></img></center>
+			</div>
+			
+			<div data-role="content" id="idContent">
+				<H2><center><font face = "Lucida Console" color = "red" size=6>Tibetan</font></center><H2>
+				<a href="#lettersPage" class="ui-btn" style="background: #D0F5A9; color" onclick="tibButtons(canvas,ctx)"><font color=green size=6>Start</font></a> <br>
+			</div>
+		</div>
+		
+		<!---Hebrew Home Page---->
+		<div data-role="page" id="heb">
+			<div data-role="header">
+				<center><a href="#homepage"><img id = "picHolder" src = "aaaa.png"></a></img></center>
+			</div>
+			
+			<div data-role="content" id="idContent">
+				<H2><center><font face = "Lucida Console" color = "red" size=6>Hebrew</font></center><H2>
+				<a href="#lettersPage" class="ui-btn" style="background: #D0F5A9; color" onclick="hebButtons(canvas,ctx)"><font color=#5F04B4 size=6>Start</font></a> <br>
+			</div>
+		</div>
+
+		<!---Letters Page---->	
+		<div data-role="page" id="lettersPage">
+			<div data-role="header">
+				<center><a href="#homepage"><img id = "picHolder" src = "aaaa.png"></a></img></center>
+			</div>
+			
+			<div data-role="content" id="idContent" >
+				<H2><center><font face = "Lucida Console" color = "red" id= "headLetter">A</font></center><H2>
+				
+				<div id="sketchpadapp" class="center">
+					<div id="letterButtons"></div>
+					<canvas id="sketchpad" height="300" width="400"></canvas>
+					<br>
+					<input type="submit" value="Redo"class="button" onclick="clearCanvas(canvas,ctx);">
+					<input type="submit" value="Done!" class="button" onclick="submitCanvas(canvas,ctx);">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

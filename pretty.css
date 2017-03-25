@@ -1,0 +1,43 @@
+.ui-page .ui-header{ 
+background:#F5F6CE;
+}
+.ui-page{
+background:#CEF6F5;
+}
+.center {
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+}
+#sketchpadapp {
+	/* Prevent nearby text being highlighted when accidentally dragging mouse outside confines of the canvas */
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+#sketchpad {
+	position: relative;
+	margin: auto;
+	height:300px;
+	width:400px;
+	border:2px solid #888;
+	border-radius:4px;
+	position:relative; /* Necessary for correct mouse co-ords in Firefox */
+}
+.button {
+	font-size: 15px;
+	padding: 10px;
+	-webkit-appearance: none;
+	background: #eee;
+	border: 1px solid #888;
+}
+img {
+	width:50%;
+}
+#letterButtons {
+	margin-left: -85px;
+	float: left;
+}
